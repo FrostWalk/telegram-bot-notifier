@@ -1,0 +1,11 @@
+[package]
+name = "telegram-bot-notifier"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+teloxide = { version = "0.12.2", features = ["rustls"] }
+tokio = { version = "1.37.0", features = ["rt", "rt-multi-thread", "macros"] }
+
+[build]
+rustflags = ["-C", "link-arg=-static", "-C", "target-feature=-crt-static"]

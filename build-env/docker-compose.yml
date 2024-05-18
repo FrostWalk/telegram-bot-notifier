@@ -1,0 +1,8 @@
+services:
+  rust_app:
+    build:
+      context: .
+    volumes:
+      - ../:/build
+    restart: "no"
+    container_name: rust_app
